@@ -1,0 +1,15 @@
+{
+  "name": "react-brag",
+  "version": "0.0.1",
+  "description": "A small libary for demoing components",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "react",
+    "demo"
+  ],
+  "author": "Luke kaalim",
+  "license": "MIT"
+}
