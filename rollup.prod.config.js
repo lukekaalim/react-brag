@@ -5,10 +5,18 @@ import image from 'rollup-plugin-image';
 import replace from 'rollup-plugin-replace';
 
 export default {
-  input: 'src/demo.js',
+  input: 'src/index.js',
   output: [
     {
-      file: 'demo/react-brag.umd.dev.js',
+      file: 'dist/index.cjs.js',
+      format: 'cjs',
+    },
+    {
+      file: 'dist/index.es.js',
+      format: 'es',
+    },
+    {
+      file: 'dist/index.umd.js',
       format: 'umd',
       name: 'REACT_BRAG',
       globals: {

@@ -6,10 +6,5 @@ injectGlobal`
 `;
 
 import Brag from './components/Brag';
-import Skeleton from './components/Skeleton';
-
-export {
-  Skeleton
-};
 
 export default Brag;

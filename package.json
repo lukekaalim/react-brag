@@ -2,11 +2,13 @@
   "name": "react-brag",
   "version": "1.0.0",
   "description": "A small library for demoing components",
-  "main": "dist/index.umd.js",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es6.js",
   "scripts": {
     "dev:build": "rollup -c rollup.dev.config.js -w",
     "dev:demo": "live-server ./demo",
     "dev": "concurrently -k \"npm:dev:*\"",
+    "build": "rollup -c rollup.prod.config.js",
     "type": "flow-typed install"
   },
   "keywords": [
