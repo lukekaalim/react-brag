@@ -28,7 +28,7 @@
     "eslint-plugin-react": "^7.10.0",
     "flow-bin": "^0.77.0",
     "flow-typed": "^2.5.1",
-    "live-server": "lukekaalim/live-server",
+    "live-server": "github:lukekaalim/live-server",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "rollup": "^0.63.4",
@@ -42,5 +42,13 @@
     "seedrandom": "^2.4.3",
     "styled-components": "^3.3.3",
     "to-case": "^2.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukekaalim/react-brag.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lukekaalim/react-brag/issues"
+  },
+  "homepage": "https://github.com/lukekaalim/react-brag#readme"
 }
