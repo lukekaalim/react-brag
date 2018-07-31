@@ -1,0 +1,3 @@
+# Javascript will always have LF line endings on checkout.
+# Useful for windows development
+*.js eol=lf
