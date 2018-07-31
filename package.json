@@ -1,6 +1,6 @@
 {
   "name": "react-brag",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A small library for demoing components",
   "main": "dist/index.cjs.js",
   "module": "dist/index.es6.js",
