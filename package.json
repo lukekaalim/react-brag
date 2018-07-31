@@ -4,7 +4,7 @@
   "description": "A small library for demoing components",
   "main": "dist/index.umd.js",
   "scripts": {
-    "test": "jest"
+    "dev:build": "rollup -c rollup.dev.config.js -w"
   },
   "keywords": [
     "react",
@@ -15,9 +15,19 @@
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.6",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "concurrently": "^3.6.1",
     "eslint": "^5.2.0",
     "eslint-plugin-flowtype": "^2.50.0",
     "eslint-plugin-react": "^7.10.0",
-    "flow-bin": "^0.77.0"
+    "react": "^16.4.1",
+    "rollup": "^0.63.4",
+    "rollup-plugin-babel": "^3.0.7",
+    "rollup-plugin-commonjs": "^9.1.4",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "live-server": "lukekaalim/live-server"
   }
 }
