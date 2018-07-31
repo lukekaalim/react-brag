@@ -5,6 +5,8 @@ export const SideMenuButtonHighlighted = styled.button`
   margin: 2px 0px;
   padding: 20px;
   font-family: 'Ubuntu Mono', monospace;
+  border-radius: 10px;
+  background-color: rgb(200, 200, 200);
 `;
 
 export const SideMenuButton = styled.button`
@@ -13,6 +15,7 @@ export const SideMenuButton = styled.button`
   color: rgb(0, 0, 0);
   padding: 20px;
   font-family: 'Ubuntu Mono', monospace;
+  border-radius: 10px;
 `;
 
 export const SideMenuContainer = styled.div`
