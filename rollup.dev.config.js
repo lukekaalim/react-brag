@@ -1,6 +1,7 @@
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import babel from 'rollup-plugin-babel';
+import image from 'rollup-plugin-image';
 import replace from 'rollup-plugin-replace';
 
 export default {
@@ -25,6 +26,7 @@ export default {
       module: false, // Default: true
     }),
     commonjs(),
+    image(),
   ],
   external: ['react'],
 };
