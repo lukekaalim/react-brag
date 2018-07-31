@@ -1,7 +1,7 @@
 {
   "name": "react-brag",
   "version": "0.0.1",
-  "description": "A small libary for demoing components",
+  "description": "A small library for demoing components",
   "main": "index.js",
   "scripts": {
     "test": "jest"
