@@ -1,4 +1,4 @@
 ReactDOM.render(
-  React.createElement(TV_API_CLIENT),
+  React.createElement(REACT_BRAG),
   document.body.appendChild(document.createElement('div'))
 );

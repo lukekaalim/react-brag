@@ -4,7 +4,10 @@
   "description": "A small library for demoing components",
   "main": "dist/index.umd.js",
   "scripts": {
-    "dev:build": "rollup -c rollup.dev.config.js -w"
+    "dev:build": "rollup -c rollup.dev.config.js -w",
+    "dev:demo": "live-server ./demo",
+    "dev": "concurrently -k \"npm:dev:*\"",
+    "type": "flow-typed install"
   },
   "keywords": [
     "react",
@@ -23,11 +26,17 @@
     "eslint": "^5.2.0",
     "eslint-plugin-flowtype": "^2.50.0",
     "eslint-plugin-react": "^7.10.0",
+    "flow-bin": "^0.77.0",
+    "flow-typed": "^2.5.1",
+    "live-server": "lukekaalim/live-server",
     "react": "^16.4.1",
+    "react-dom": "^16.4.1",
     "rollup": "^0.63.4",
     "rollup-plugin-babel": "^3.0.7",
     "rollup-plugin-commonjs": "^9.1.4",
-    "rollup-plugin-node-resolve": "^3.3.0",
-    "live-server": "lukekaalim/live-server"
+    "rollup-plugin-node-resolve": "^3.3.0"
+  },
+  "dependencies": {
+    "styled-components": "^3.3.3"
   }
 }

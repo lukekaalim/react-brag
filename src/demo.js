@@ -1,2 +1,9 @@
+import React from 'react';
 
-console.log('DEMO WORKING!');
+const Brag = () => (
+  <div>
+    <h1> Nice! </h1>
+  </div>
+);
+
+export default Brag;
