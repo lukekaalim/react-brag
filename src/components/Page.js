@@ -6,7 +6,9 @@ const Page = styled.div`
   flex-direction: column;
   flex: 5;
   font-family: 'Ubuntu Mono', monospace;
-  overflow-y: scroll;
+  position: relative;
+  background-color: white;
+  overflow-x: scroll;
 `;
 
 export default Page;

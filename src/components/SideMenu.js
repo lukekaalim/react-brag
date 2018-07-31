@@ -25,6 +25,7 @@ export const SideMenuContainer = styled.div`
   overflow-y: auto;
   border-right: solid 1px black;
   box-shadow: 0 0 20px #bebebe;
-  background-color: #5b14d7;
+  background-color: ${props => props.sideMenuColor};
   padding: 5px;
+  min-width: 200px;
 `;

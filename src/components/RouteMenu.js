@@ -12,10 +12,11 @@ type Props = {
   routes: Array<Route>,
   currentRouteIndex: number,
   navigate: (routeIndex: number) => void,
+  sideMenuColor?: string,
 };
 
-const RouteMenu = ({ routes, navigate, currentRouteIndex }: Props) => (
-  <SideMenuContainer>
+const RouteMenu = ({ routes, navigate, currentRouteIndex, sideMenuColor }: Props) => (
+  <SideMenuContainer sideMenuColor={sideMenuColor}>
     {
       routes.map((route, index) => index !== currentRouteIndex ?
         <SideMenuButton key={index} onClick={() => navigate(index)}>
