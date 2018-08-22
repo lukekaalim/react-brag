@@ -28,22 +28,22 @@
     "eslint": "^5.2.0",
     "eslint-plugin-flowtype": "^2.50.0",
     "eslint-plugin-react": "^7.10.0",
-    "flow-bin": "^0.77.0",
+    "flow-bin": "^0.79.1",
     "flow-typed": "^2.5.1",
     "live-server": "github:lukekaalim/live-server",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
     "rollup": "^0.63.4",
     "rollup-plugin-babel": "^3.0.7",
     "rollup-plugin-commonjs": "^9.1.4",
     "rollup-plugin-image": "^1.0.2",
     "rollup-plugin-node-resolve": "^3.3.0",
-    "rollup-plugin-replace": "^2.0.0"
+    "rollup-plugin-replace": "^2.0.0",
+    "rollup-plugin-string": "^2.0.2"
   },
   "dependencies": {
-    "seedrandom": "^2.4.3",
-    "styled-components": "^3.3.3",
-    "to-case": "^2.0.0"
+    "react": "^16.4.2",
+    "snarkdown": "^1.2.2",
+    "styled-components": "^3.4.2",
+    "uuid": "^3.3.2"
   },
   "repository": {
     "type": "git",
