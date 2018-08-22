@@ -7,8 +7,6 @@ import SideMenu from './SideMenu';
 import SideMenuButton from './SideMenuButton';
 import SimpleRouter from './SimpleRouter';
 
-import { getVibrantColor } from '../lib/color';
-
 const BragContainer = styled.section`
   flex: 1;
   display: flex;
@@ -22,7 +20,7 @@ type Props = {
   color?: string,
 };
 
-const Brag = ({ readme, components, color = getVibrantColor() }: Props) => {
+const Brag = ({ readme, components, color = '#fff' }: Props) => {
   const routes = [
     { name: '📖 readme', node: readme },
     ...components,

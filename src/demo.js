@@ -49,14 +49,6 @@ const COMPONENTS = [
     name: '🏆 <Brag />',
     node: <SimpleComponentView componentNode={EXAMPLE_BRAG} />,
   },
-  {
-    name: '<Brag />',
-    node: <SimpleComponentView componentNode={EXAMPLE_BRAG} />,
-  },
-  {
-    name: '<Brag />',
-    node: <SimpleComponentView componentNode={EXAMPLE_BRAG} />,
-  },
 ];
 
 
