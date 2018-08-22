@@ -1,7 +1,6 @@
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import babel from 'rollup-plugin-babel';
-import image from 'rollup-plugin-image';
 import replace from 'rollup-plugin-replace';
 
 export default {
@@ -18,15 +17,14 @@ export default {
   ],
   plugins: [
     babel({ exclude: 'node_modules/**' }),
-    replace({
-      'process.env.NODE_ENV': JSON.stringify( 'development' )
-    }),
     resolve({
-      browser: true,
       module: false,
+      browser: true,
     }),
     commonjs(),
-    image(),
+    replace({
+      'process.env.NODE_ENV': JSON.stringify('production'),
+    }),
   ],
   external: ['react'],
 };
