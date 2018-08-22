@@ -1,76 +1,50 @@
 // @flow
 import React from 'react';
 import type { Node } from 'react';
+import styled from 'styled-components';
 
-import { HorizontalContainer, BragContainer } from './Container';
-import Page from './Page';
-import RouteMenu from './RouteMenu';
-import Readme from './Readme';
-import Router from './Router';
-import PreviewWindow from './PreviewWindow';
-import { getVibrantColor } from '../lib/colors';
+import SideMenu from './SideMenu';
+import SideMenuButton from './SideMenuButton';
+import SimpleRouter from './SimpleRouter';
 
-type PropType =
-  | { type: 'enum', values: Array<string> }
-  | { type: 'json' }
-  | { type: 'string' }
-  | { type: 'float' }
-  | { type: 'int' }
+import { getVibrantColor } from '../lib/color';
 
-export type PropDesc = {
-  propName: string,
-  propType: PropType,
-  initialValue: any,
-};
-
-export type ComponentBrag = {
-  factory: (props: any) => Node,
-  displayType: 'functional' | 'presentational';
-  propsDesc: Array<PropDesc>,
-  name: string,
-};
-
-export type LibraryBrag = {
-  name: string,
-  importStatement: string,
-  version: string,
-  abstract: string,
-  description: string,
-};
+const BragContainer = styled.section`
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+`;
 
 type Props = {
-  components: Array<ComponentBrag>,
-  library: LibraryBrag,
+  readme: Node,
+  components: Array<{ name: string, node: Node }>,
+  color?: string,
 };
 
-const Brag = ({ components, library }: Props) => {
-  const readmeRoute = {
-    name: '📖 Readme',
-    node: <Page><Readme components={components} library={library} /></Page>,
-  };
-  const componentRoutes = components.map(component => ({
-    name: component.name,
-    node: <Page><PreviewWindow component={component} /></Page>,
-  }));
-
-  const routes = [readmeRoute, ...componentRoutes];
+const Brag = ({ readme, components, color = getVibrantColor() }: Props) => {
+  const routes = [
+    { name: '📖 readme', node: readme },
+    ...components,
+  ];
 
   return (
-    <BragContainer>
-      <HorizontalContainer>
-        <Router
-          routes={routes}
-          renderMenu={(navigate, currentRouteIndex, routes) => (
-            <RouteMenu
-              sideMenuColor={getVibrantColor(library.name)}
-              routes={routes}
-              navigate={navigate}
-              currentRouteIndex={currentRouteIndex}
-            />
-          )}
-        />
-      </HorizontalContainer>
-    </BragContainer>
+    <SimpleRouter
+      render={(currentRouteIndex, navigate) => (
+        <BragContainer>
+          <SideMenu color={color}>
+            {routes.map((route, routeIndex) =>
+              <SideMenuButton
+                key={routeIndex}
+                disabled={routeIndex === currentRouteIndex}
+                onClick={() => navigate(routeIndex)}
+              >{route.name}</SideMenuButton>
+            )}
+          </SideMenu>
+          {routes[currentRouteIndex].node}
+        </BragContainer>
+      )}
+    />
   );
 };
 
